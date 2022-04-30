@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 191557477}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shoot Pos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,7 +214,7 @@ GameObject:
   - component: {fileID: 724569362823207384}
   - component: {fileID: 724569362823207385}
   - component: {fileID: 399944002}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -520,7 +520,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 724569363579898892}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ground Check
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -849,7 +849,7 @@ GameObject:
   m_Component:
   - component: {fileID: 724569364441160168}
   - component: {fileID: 724569364441160183}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
