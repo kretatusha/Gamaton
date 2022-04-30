@@ -11,19 +11,9 @@ TagManager:
   - 
   - Water
   - UI
-<<<<<<< HEAD
-<<<<<<< HEAD
-  - Ground
   - 
-=======
-  - Ground
->>>>>>> 36343c4d6ce70bf37e55b214afe866843de3f8ae
   - 
-=======
-  - Background
-  - Foreground
-  - Objects
->>>>>>> 42793bacdc8b0bdc4b08a3202829b303d56eace1
+  - 
   - 
   - 
   - 
@@ -50,13 +40,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Background
-    uniqueID: 1903666621
-    locked: 0
-  - name: Foreground
-    uniqueID: 1626888495
-    locked: 0
-  - name: Objects
-    uniqueID: 3243016355
     locked: 0

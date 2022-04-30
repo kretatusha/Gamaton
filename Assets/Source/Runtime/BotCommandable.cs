@@ -6,6 +6,7 @@ namespace Source.Runtime
     {
         private readonly CommandReceiver _commandReceiver;
         private readonly Rigidbody2D _rigidbody2D;
+        private readonly Transform _body;
         private readonly float _movementSpeed;
         private readonly float _jumpPower;
         private bool _isMove;
@@ -13,10 +14,11 @@ namespace Source.Runtime
         
         public Vector3 Velocity => _velocity;
 
-        public BotCommandable(CommandReceiver commandReceiver, Rigidbody2D rigidbody2D, float movementSpeed, float jumpPower)
+        public BotCommandable(CommandReceiver commandReceiver, Rigidbody2D rigidbody2D, Transform body, float movementSpeed, float jumpPower)
         {
             _commandReceiver = commandReceiver;
             _rigidbody2D = rigidbody2D;
+            _body = body;
             _movementSpeed = movementSpeed;
             _jumpPower = jumpPower;
         }
@@ -38,15 +40,14 @@ namespace Source.Runtime
 
         private void Flip()
         {
-            _rigidbody2D.transform.Rotate(Vector3.up, 180);
-            Move();
+            _body.Rotate(Vector3.up, 180);
         }
 
         private void Stop() => _isMove = false;
 
         public void Update()
         {
-            _velocity.x = _isMove ? _rigidbody2D.transform.right.x * _movementSpeed : 0;
+            _velocity.x = _isMove ? _body.right.x * _movementSpeed : 0;
             _velocity.y = _rigidbody2D.velocity.y;
             _rigidbody2D.velocity = Velocity; 
         }
