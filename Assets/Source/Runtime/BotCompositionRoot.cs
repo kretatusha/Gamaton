@@ -70,6 +70,10 @@ public class BotCompositionRoot : MonoBehaviour
     {
         _groundChecker.Update();
         _commandable.Update();
+    }
+
+    private void Update()
+    {
         _botAnimator.Update();
     }
 

@@ -49,7 +49,7 @@ namespace Source.Runtime
         {
             _velocity.x = _isMove ? _body.right.x * _movementSpeed : 0;
             _velocity.y = _rigidbody2D.velocity.y;
-            _rigidbody2D.velocity = Velocity; 
+            _rigidbody2D.velocity = Velocity;
         }
     }
 }
