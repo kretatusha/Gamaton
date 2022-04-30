@@ -505,7 +505,7 @@ MonoBehaviour:
   _groundCheckRadius: 0.2
   _groundLayerMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
 --- !u!61 &1521622737681131578
 BoxCollider2D:
   m_ObjectHideFlags: 0
