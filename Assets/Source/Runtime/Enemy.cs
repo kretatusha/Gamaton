@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using Source.Runtime;
 using UnityEngine;
 
@@ -10,5 +8,11 @@ public class Enemy : MonoBehaviour, IDamageable
     public void TakeDamage()
     {
         Destroy(gameObject);
+    }
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if(col.gameObject.TryGetComponent(out Bot bot))
+            bot.TakeDamage();
     }
 }

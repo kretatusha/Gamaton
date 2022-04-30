@@ -27,13 +27,13 @@ public class BotAnimator
         _animator.SetBool(_groundedHash, _groundChecker.IsGrounded);
     }
 
+    public void OnDied()
+    {
+        _animator.SetTrigger(_dieHash);
+    }
+
     private void OnShooted()
     {
         _animator.SetTrigger(_shootHash);
-    }
-
-    private void OnDied()
-    {
-        _animator.SetTrigger(_dieHash);
     }
 }
