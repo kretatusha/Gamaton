@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4477028129736519476}
   - component: {fileID: 8508548380926608061}
   m_Layer: 0
-  m_Name: Signal
+  m_Name: Good Signal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

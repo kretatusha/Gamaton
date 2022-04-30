@@ -10,12 +10,15 @@ namespace Source.Runtime
     public class CommandTransmitter : SerializedMonoBehaviour
     {
         public event Action<BotCommand> Commanded;
+        
         [SerializeField]
         private Dictionary<string, BotCommand> _commandDictionary = new();
         [SerializeField]
         private TMP_InputField _inputField;
         [SerializeField]
-        private Transform _signalPrefab;
+        private Transform _goodSignalPrefab;
+        [SerializeField]
+        private Transform _wrongSignalPrefab;
         [SerializeField]
         private float _signalSpeed;
         [SerializeField]
@@ -68,17 +71,17 @@ namespace Source.Runtime
             _inputField.text = "";
             if (_commandDictionary.ContainsKey(input))
             {
-                CreateCommandSignal(input);
+                CreateCommandSignal(input, _goodSignalPrefab);
             }
             else
             {
-                Debug.Log("Incorrect command");
+                CreateCommandSignal("stop", _wrongSignalPrefab);
             }
         }
 
-        private void CreateCommandSignal(string input)
+        private void CreateCommandSignal(string input, Transform signalPrefab)
         {
-            var signal = Instantiate(_signalPrefab);
+            var signal = Instantiate(signalPrefab);
             signal.transform.position = Camera.main.ScreenToWorldPoint(transform.position);
             StartCoroutine(SignalMove(signal, () => Commanded?.Invoke(_commandDictionary[input])));
         }
