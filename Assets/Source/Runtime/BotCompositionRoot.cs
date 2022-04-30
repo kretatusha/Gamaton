@@ -1,6 +1,8 @@
 using System;
 using Source.Runtime;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(Animator), typeof(Rigidbody2D))]
 public class BotCompositionRoot : MonoBehaviour
@@ -9,7 +11,9 @@ public class BotCompositionRoot : MonoBehaviour
     private Transform _botBody;
     [Header("Movement")]
     [SerializeField]
-    private float _movementSpeed;
+    private float _movementSpeedMax;
+    [SerializeField]
+    private float _movementSpeedMin;
     [SerializeField]
     private float _jumpPower;
 
@@ -29,6 +33,11 @@ public class BotCompositionRoot : MonoBehaviour
 
     private Rigidbody2D _rigidbody2D;
     private Animator _animator;
+
+    public void Reload()
+    {
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+    }
 
     private void Awake()
     {
@@ -58,9 +67,10 @@ public class BotCompositionRoot : MonoBehaviour
         _commandTransmitter = FindObjectOfType<CommandTransmitter>();
         _commandReceiver = new CommandReceiver(_commandTransmitter);
         _groundChecker = new GroundChecker(_groundCheckPoint, _groundCheckRadius, _groundLayerMask);
-        _commandable = new BotCommandable(_commandReceiver, _rigidbody2D, _botBody, _movementSpeed,
+        var movementSpeed = Random.Range(_movementSpeedMin, _movementSpeedMax);
+        _commandable = new BotCommandable(_commandReceiver, _rigidbody2D, _botBody, movementSpeed,
             _jumpPower);
-        _botAnimator = new BotAnimator(GetComponent<Animator>(), _commandable, _groundChecker);
+        _botAnimator = new BotAnimator(GetComponent<Animator>(), _commandable, _groundChecker, _commandReceiver);
 
         _commandReceiver.Init();
         _commandable.Init();
