@@ -54,6 +54,9 @@ public class BotCompositionRoot : MonoBehaviour
     {
         _animator = GetComponent<Animator>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        _botShooter = GetComponent<BotShooter>();
+        _commandable = GetComponent<Bot>();
+        _commandable.enabled = false;
     }
 
     private void OnEnable()
@@ -75,18 +78,17 @@ public class BotCompositionRoot : MonoBehaviour
 
     private void Compose()
     {
-        _botShooter = GetComponent<BotShooter>();
         _commandTransmitter = FindObjectOfType<CommandTransmitter>();
         _commandReceiver = new CommandReceiver(_commandTransmitter);
         _groundChecker = new GroundChecker(_groundCheckPoint, _groundCheckRadius, _groundLayerMask);
         
         var movementSpeed = Random.Range(_movementSpeedMin, _movementSpeedMax);
-        _commandable = GetComponent<Bot>();
+        _commandable.Init(_commandReceiver, _rigidbody2D, _botBody, movementSpeed, _jumpPower);
+        
         _botAnimator = new BotAnimator(GetComponent<Animator>(), _commandable, _groundChecker, _commandReceiver);
         
         _botShooter.Init(_shootPoint, _bulletPrefab, _bulletSpeed, _botBody);
         _commandReceiver.Init();
-        _commandable.Init(_commandReceiver, _rigidbody2D, _botBody, movementSpeed, _jumpPower);
     }
 
     private void FixedUpdate()

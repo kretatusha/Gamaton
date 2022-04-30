@@ -22,11 +22,13 @@ namespace Source.Runtime
             _body = body;
             _movementSpeed = movementSpeed;
             _jumpPower = jumpPower;
-            
+
             _commandReceiver.MoveCommanded += Move;
             _commandReceiver.JumpCommanded += Jump;
             _commandReceiver.StopCommanded += Stop;
             _commandReceiver.FlipCommanded += Flip;
+
+            enabled = true;
         }
 
         private void Move() => _isMove = true;
