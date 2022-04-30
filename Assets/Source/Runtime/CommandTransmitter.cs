@@ -65,8 +65,6 @@ namespace Source.Runtime
             {
                 Debug.Log("Incorrect command");
             }
-
-            _inputField.ActivateInputField();
         }
 
         private void CreateCommandSignal(string input)
