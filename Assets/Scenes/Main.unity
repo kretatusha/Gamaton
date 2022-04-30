@@ -1970,18 +1970,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 191557476, guid: f8d04591160b67f4d9aceea128190ef3, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 724569362823207388, guid: f8d04591160b67f4d9aceea128190ef3, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 724569363579898893, guid: f8d04591160b67f4d9aceea128190ef3, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 724569364029904576, guid: f8d04591160b67f4d9aceea128190ef3, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -2037,10 +2025,6 @@ PrefabInstance:
     - target: {fileID: 724569364029904580, guid: f8d04591160b67f4d9aceea128190ef3, type: 3}
       propertyPath: m_Name
       value: Claw
-      objectReference: {fileID: 0}
-    - target: {fileID: 724569364441160169, guid: f8d04591160b67f4d9aceea128190ef3, type: 3}
-      propertyPath: m_Layer
-      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8d04591160b67f4d9aceea128190ef3, type: 3}
