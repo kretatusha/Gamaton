@@ -2,19 +2,19 @@
 
 namespace Source.Runtime
 {
-    public class BotCommandable
+    public class Bot : MonoBehaviour
     {
-        private readonly CommandReceiver _commandReceiver;
-        private readonly Rigidbody2D _rigidbody2D;
-        private readonly Transform _body;
-        private readonly float _movementSpeed;
-        private readonly float _jumpPower;
+        private CommandReceiver _commandReceiver;
+        private Rigidbody2D _rigidbody2D;
+        private Transform _body;
+        private float _movementSpeed;
+        private float _jumpPower;
         private bool _isMove;
         private Vector3 _velocity;
 
-        public Vector3 Velocity => _velocity;
+        public Vector3 Velocity => _rigidbody2D.velocity;
 
-        public BotCommandable(CommandReceiver commandReceiver, Rigidbody2D rigidbody2D, Transform body,
+        public void Init(CommandReceiver commandReceiver, Rigidbody2D rigidbody2D, Transform body,
             float movementSpeed, float jumpPower)
         {
             _commandReceiver = commandReceiver;
@@ -22,10 +22,7 @@ namespace Source.Runtime
             _body = body;
             _movementSpeed = movementSpeed;
             _jumpPower = jumpPower;
-        }
-
-        public void Init()
-        {
+            
             _commandReceiver.MoveCommanded += Move;
             _commandReceiver.JumpCommanded += Jump;
             _commandReceiver.StopCommanded += Stop;
@@ -50,7 +47,7 @@ namespace Source.Runtime
         {
             _velocity.x = _isMove ? _body.right.x * _movementSpeed : 0;
             _velocity.y = _rigidbody2D.velocity.y;
-            _rigidbody2D.velocity = Velocity;
+            _rigidbody2D.velocity = _velocity;
         }
     }
 }

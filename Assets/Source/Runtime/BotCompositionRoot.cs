@@ -31,14 +31,16 @@ public class BotCompositionRoot : MonoBehaviour
     [Header("Shooing")]
     [SerializeField]
     private Rigidbody2D _bulletPrefab;
+    [SerializeField]
     private float _bulletSpeed;
+    [SerializeField]
     private Transform _shootPoint;
     private BotShooter _botShooter;
 
     private BotAnimator _botAnimator;
     private CommandTransmitter _commandTransmitter;
     private CommandReceiver _commandReceiver;
-    private BotCommandable _commandable;
+    private Bot _commandable;
 
     private Rigidbody2D _rigidbody2D;
     private Animator _animator;
@@ -79,13 +81,12 @@ public class BotCompositionRoot : MonoBehaviour
         _groundChecker = new GroundChecker(_groundCheckPoint, _groundCheckRadius, _groundLayerMask);
         
         var movementSpeed = Random.Range(_movementSpeedMin, _movementSpeedMax);
-        _commandable = new BotCommandable(_commandReceiver, _rigidbody2D, _botBody, movementSpeed,
-            _jumpPower);
+        _commandable = GetComponent<Bot>();
         _botAnimator = new BotAnimator(GetComponent<Animator>(), _commandable, _groundChecker, _commandReceiver);
-
+        
         _botShooter.Init(_shootPoint, _bulletPrefab, _bulletSpeed, _botBody);
         _commandReceiver.Init();
-        _commandable.Init();
+        _commandable.Init(_commandReceiver, _rigidbody2D, _botBody, movementSpeed, _jumpPower);
     }
 
     private void FixedUpdate()

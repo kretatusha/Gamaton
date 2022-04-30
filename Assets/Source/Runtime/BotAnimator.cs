@@ -8,14 +8,14 @@ public class BotAnimator
     private readonly int _dieHash = Animator.StringToHash("Die");
     private readonly int _shootHash = Animator.StringToHash("Shoot");
     private readonly Animator _animator;
-    private readonly BotCommandable _botCommandable;
+    private readonly Bot _bot;
     private readonly GroundChecker _groundChecker;
 
-    public BotAnimator(Animator animator, BotCommandable botCommandable, GroundChecker groundChecker,
+    public BotAnimator(Animator animator, Bot bot, GroundChecker groundChecker,
         CommandReceiver commandReceiver)
     {
         _animator = animator;
-        _botCommandable = botCommandable;
+        _bot = bot;
         _groundChecker = groundChecker;
         commandReceiver.KillCommanded += OnDied;
         commandReceiver.ShootCommanded += OnShooted;
@@ -23,7 +23,7 @@ public class BotAnimator
 
     public void Update()
     {
-        _animator.SetFloat(_velocityXHash, Mathf.Abs(_botCommandable.Velocity.x));
+        _animator.SetFloat(_velocityXHash, Mathf.Abs(_bot.Velocity.x));
         _animator.SetBool(_groundedHash, _groundChecker.IsGrounded);
     }
 

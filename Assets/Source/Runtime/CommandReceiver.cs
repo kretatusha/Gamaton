@@ -44,6 +44,7 @@ namespace Source.Runtime
                     StopCommanded?.Invoke();
                     break;
                 case BotCommand.SHOOT:
+                    StopCommanded?.Invoke();
                     ShootCommanded?.Invoke();
                     break;
             }
