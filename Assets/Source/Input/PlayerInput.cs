@@ -35,6 +35,15 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PreviousCommand"",
+                    ""type"": ""Button"",
+                    ""id"": ""ceeaa3b6-18c1-4a79-8f78-5e855158f6f7"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -48,6 +57,17 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""action"": ""Enter"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a005f0b3-e305-43ad-9eaa-e6f41ca92bed"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PreviousCommand"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -57,6 +77,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Enter = m_Player.FindAction("Enter", throwIfNotFound: true);
+        m_Player_PreviousCommand = m_Player.FindAction("PreviousCommand", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -117,11 +138,13 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Player;
     private IPlayerActions m_PlayerActionsCallbackInterface;
     private readonly InputAction m_Player_Enter;
+    private readonly InputAction m_Player_PreviousCommand;
     public struct PlayerActions
     {
         private @PlayerInput m_Wrapper;
         public PlayerActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @Enter => m_Wrapper.m_Player_Enter;
+        public InputAction @PreviousCommand => m_Wrapper.m_Player_PreviousCommand;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -134,6 +157,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @Enter.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEnter;
                 @Enter.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEnter;
                 @Enter.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEnter;
+                @PreviousCommand.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPreviousCommand;
+                @PreviousCommand.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPreviousCommand;
+                @PreviousCommand.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPreviousCommand;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -141,6 +167,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @Enter.started += instance.OnEnter;
                 @Enter.performed += instance.OnEnter;
                 @Enter.canceled += instance.OnEnter;
+                @PreviousCommand.started += instance.OnPreviousCommand;
+                @PreviousCommand.performed += instance.OnPreviousCommand;
+                @PreviousCommand.canceled += instance.OnPreviousCommand;
             }
         }
     }
@@ -148,5 +177,6 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
     public interface IPlayerActions
     {
         void OnEnter(InputAction.CallbackContext context);
+        void OnPreviousCommand(InputAction.CallbackContext context);
     }
 }

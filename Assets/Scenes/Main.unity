@@ -1970,6 +1970,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 191557476, guid: f8d04591160b67f4d9aceea128190ef3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 724569362823207388, guid: f8d04591160b67f4d9aceea128190ef3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 724569363579898893, guid: f8d04591160b67f4d9aceea128190ef3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 724569364029904576, guid: f8d04591160b67f4d9aceea128190ef3, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -2026,6 +2038,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Claw
       objectReference: {fileID: 0}
+    - target: {fileID: 724569364441160169, guid: f8d04591160b67f4d9aceea128190ef3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8d04591160b67f4d9aceea128190ef3, type: 3}
 --- !u!1001 &4558105857215780548
@@ -2039,6 +2055,10 @@ PrefabInstance:
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 4558105857930560860, guid: 003c1009119813c4c8356bb0a579cae1, type: 3}
+    - target: {fileID: 4558105857930560860, guid: 003c1009119813c4c8356bb0a579cae1, type: 3}
+      propertyPath: serializationData.SerializationNodes.Array.size
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 4558105857930560860, guid: 003c1009119813c4c8356bb0a579cae1, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.size
       value: 2
@@ -2054,8 +2074,24 @@ PrefabInstance:
         Assembly-CSharp",5}'
       objectReference: {fileID: 0}
     - target: {fileID: 4558105857930560860, guid: 003c1009119813c4c8356bb0a579cae1, type: 3}
-      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.size
-      value: 0
+      propertyPath: serializationData.SerializationNodes.Array.data[3].Data
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558105857930560860, guid: 003c1009119813c4c8356bb0a579cae1, type: 3}
+      propertyPath: serializationData.SerializationNodes.Array.data[25].Data
+      value: shoot
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558105857930560860, guid: 003c1009119813c4c8356bb0a579cae1, type: 3}
+      propertyPath: serializationData.SerializationNodes.Array.data[25].Name
+      value: $k
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558105857930560860, guid: 003c1009119813c4c8356bb0a579cae1, type: 3}
+      propertyPath: serializationData.SerializationNodes.Array.data[24].Entry
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558105857930560860, guid: 003c1009119813c4c8356bb0a579cae1, type: 3}
+      propertyPath: serializationData.SerializationNodes.Array.data[25].Entry
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4558105858357437024, guid: 003c1009119813c4c8356bb0a579cae1, type: 3}
       propertyPath: m_Name
@@ -2158,6 +2194,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 5402898942502069428, guid: 54dd9868ffd4f3743b16cfd7a8698db7, type: 3}
+      propertyPath: m_Size.x
+      value: 0.62613106
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402898942502069428, guid: 54dd9868ffd4f3743b16cfd7a8698db7, type: 3}
+      propertyPath: m_Size.y
+      value: 1.5012186
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402898942502069428, guid: 54dd9868ffd4f3743b16cfd7a8698db7, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0033621788
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402898942502069428, guid: 54dd9868ffd4f3743b16cfd7a8698db7, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.0034296513
+      objectReference: {fileID: 0}
     - target: {fileID: 5402898942502069429, guid: 54dd9868ffd4f3743b16cfd7a8698db7, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -2168,7 +2220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5402898942502069429, guid: 54dd9868ffd4f3743b16cfd7a8698db7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.52
+      value: -0.26
       objectReference: {fileID: 0}
     - target: {fileID: 5402898942502069429, guid: 54dd9868ffd4f3743b16cfd7a8698db7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2201,10 +2253,6 @@ PrefabInstance:
     - target: {fileID: 5402898942502069429, guid: 54dd9868ffd4f3743b16cfd7a8698db7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5402898942502069431, guid: 54dd9868ffd4f3743b16cfd7a8698db7, type: 3}
-      propertyPath: m_Constraints
-      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54dd9868ffd4f3743b16cfd7a8698db7, type: 3}
