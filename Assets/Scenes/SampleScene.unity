@@ -124,6 +124,9 @@ NavMeshSettings:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 36343c4d6ce70bf37e55b214afe866843de3f8ae
 --- !u!1 &30721853
 GameObject:
   m_ObjectHideFlags: 0
@@ -870,6 +873,9 @@ Transform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 36343c4d6ce70bf37e55b214afe866843de3f8ae
 --- !u!61 &713958712
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1439,6 +1445,7 @@ Transform:
   m_Father: {fileID: 1484383210}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 =======
 --- !u!1001 &6946280339962795984
 PrefabInstance:
@@ -1498,3 +1505,5 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2ecbda7a4bec9a4aaef263d6a8d45af, type: 3}
 >>>>>>> 42793bacdc8b0bdc4b08a3202829b303d56eace1
+=======
+>>>>>>> 36343c4d6ce70bf37e55b214afe866843de3f8ae
