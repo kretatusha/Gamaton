@@ -10,16 +10,24 @@ public class BotAnimator
     private readonly BotCommandable _botCommandable;
     private readonly GroundChecker _groundChecker;
 
-    public BotAnimator(Animator animator, BotCommandable botCommandable, GroundChecker groundChecker)
+    public BotAnimator(Animator animator, BotCommandable botCommandable, GroundChecker groundChecker,
+        CommandReceiver commandReceiver)
     {
         _animator = animator;
         _botCommandable = botCommandable;
         _groundChecker = groundChecker;
+        commandReceiver.KillCommanded += OnDied;
     }
 
     public void Update()
     {
         _animator.SetFloat(_velocityXHash, Mathf.Abs(_botCommandable.Velocity.x));
         _animator.SetBool(_groundedHash, _groundChecker.IsGrounded);
+    }
+
+    private void OnDied()
+    {
+        _animator.SetTrigger(_dieHash);
+        Debug.Log("Died");
     }
 }

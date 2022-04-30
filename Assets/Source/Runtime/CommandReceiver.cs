@@ -36,6 +36,7 @@ namespace Source.Runtime
                     FlipCommanded?.Invoke();
                     break;
                 case BotCommand.KILL:
+                    StopCommanded?.Invoke();
                     KillCommanded?.Invoke();
                     break;
                 case BotCommand.STOP:

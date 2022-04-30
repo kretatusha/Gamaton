@@ -950,10 +950,10 @@ TextureImporter:
       name: JBOT-all animations-Sheet 01_39
       rect:
         serializedVersion: 2
-        x: 123
-        y: 22
-        width: 18
-        height: 16
+        x: 117
+        y: 6
+        width: 29
+        height: 42
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -971,10 +971,10 @@ TextureImporter:
       name: JBOT-all animations-Sheet 01_40
       rect:
         serializedVersion: 2
-        x: 178
-        y: 25
-        width: 10
-        height: 10
+        x: 168
+        y: 6
+        width: 29
+        height: 42
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -992,10 +992,10 @@ TextureImporter:
       name: JBOT-all animations-Sheet 01_41
       rect:
         serializedVersion: 2
-        x: 233
-        y: 27
-        width: 5
-        height: 5
+        x: 221
+        y: 6
+        width: 29
+        height: 42
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1013,10 +1013,10 @@ TextureImporter:
       name: JBOT-all animations-Sheet 01_42
       rect:
         serializedVersion: 2
-        x: 285
-        y: 25
-        width: 127
-        height: 9
+        x: 273
+        y: 6
+        width: 29
+        height: 42
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1026,6 +1026,90 @@ TextureImporter:
       bones: []
       spriteID: 2881fb907edfff64db924536d80460a9
       internalID: -827478119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JBOT-all animations-Sheet 01_43
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 7
+        width: 29
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08854c20876d30c4cb37172006d7c23f
+      internalID: 70110132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JBOT-all animations-Sheet 01_44
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 7
+        width: 29
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32fdd5e090b74ad4e8ea4e73c6134761
+      internalID: -1865250956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JBOT-all animations-Sheet 01_45
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 7
+        width: 29
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9bfc6aec1c211049b0be2698efa7d4a
+      internalID: -1591926576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JBOT-all animations-Sheet 01_46
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 23
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf0b388a7933d9c49a755fed6bcae132
+      internalID: 986388635
       vertices: []
       indices: 
       edges: []
@@ -1043,15 +1127,18 @@ TextureImporter:
     nameFileIdTable:
       JBOT-all animations-Sheet 01_38: -334918900
       JBOT-all animations-Sheet 01_41: -1775019787
+      JBOT-all animations-Sheet 01_46: -1865250956
       JBOT-all animations-Sheet 01_13: -1562078307
       JBOT-all animations-Sheet 01_32: -650005674
       JBOT-all animations-Sheet 01_37: 1137816690
       JBOT-all animations-Sheet 01_31: 1859101920
       JBOT-all animations-Sheet 01_36: -1774184981
       JBOT-all animations-Sheet 01_6: -1954279222
+      JBOT-all animations-Sheet 01_45: 70110132
       JBOT-all animations-Sheet 01_4: 565628412
       JBOT-all animations-Sheet 01_40: 1910927712
       JBOT-all animations-Sheet 01_42: -827478119
+      JBOT-all animations-Sheet 01_43: -1012559529
       JBOT-all animations-Sheet 01_0: 217442732
       JBOT-all animations-Sheet 01_20: -288899939
       JBOT-all animations-Sheet 01_27: -436431050
@@ -1073,6 +1160,7 @@ TextureImporter:
       JBOT-all animations-Sheet 01_10: 210979312
       JBOT-all animations-Sheet 01_26: 1010547115
       JBOT-all animations-Sheet 01_34: 1865610571
+      JBOT-all animations-Sheet 01_44: 260555498
       JBOT-all animations-Sheet 01_28: -906872818
       JBOT-all animations-Sheet 01_14: -1063692637
       JBOT-all animations-Sheet 01_16: -1449684792
