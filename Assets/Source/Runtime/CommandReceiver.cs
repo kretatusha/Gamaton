@@ -9,6 +9,7 @@ namespace Source.Runtime
         public event Action StopCommanded;
         public event Action FlipCommanded;
         public event Action KillCommanded;
+        public event Action ShootCommanded;
         
         private readonly CommandTransmitter _commandTransmitter;
 
@@ -41,6 +42,9 @@ namespace Source.Runtime
                     break;
                 case BotCommand.STOP:
                     StopCommanded?.Invoke();
+                    break;
+                case BotCommand.SHOOT:
+                    ShootCommanded?.Invoke();
                     break;
             }
         }

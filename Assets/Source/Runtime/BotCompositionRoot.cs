@@ -1,10 +1,12 @@
-using System;
 using Source.Runtime;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
-[RequireComponent(typeof(Animator), typeof(Rigidbody2D))]
+[RequireComponent(
+    typeof(Animator), 
+    typeof(Rigidbody2D), 
+    typeof(BotShooter))]
 public class BotCompositionRoot : MonoBehaviour
 {
     [SerializeField]
@@ -25,6 +27,13 @@ public class BotCompositionRoot : MonoBehaviour
     [SerializeField]
     private LayerMask _groundLayerMask;
     private GroundChecker _groundChecker;
+
+    [Header("Shooing")]
+    [SerializeField]
+    private Rigidbody2D _bulletPrefab;
+    private float _bulletSpeed;
+    private Transform _shootPoint;
+    private BotShooter _botShooter;
 
     private BotAnimator _botAnimator;
     private CommandTransmitter _commandTransmitter;
@@ -64,14 +73,17 @@ public class BotCompositionRoot : MonoBehaviour
 
     private void Compose()
     {
+        _botShooter = GetComponent<BotShooter>();
         _commandTransmitter = FindObjectOfType<CommandTransmitter>();
         _commandReceiver = new CommandReceiver(_commandTransmitter);
         _groundChecker = new GroundChecker(_groundCheckPoint, _groundCheckRadius, _groundLayerMask);
+        
         var movementSpeed = Random.Range(_movementSpeedMin, _movementSpeedMax);
         _commandable = new BotCommandable(_commandReceiver, _rigidbody2D, _botBody, movementSpeed,
             _jumpPower);
         _botAnimator = new BotAnimator(GetComponent<Animator>(), _commandable, _groundChecker, _commandReceiver);
 
+        _botShooter.Init(_shootPoint, _bulletPrefab, _bulletSpeed, _botBody);
         _commandReceiver.Init();
         _commandable.Init();
     }

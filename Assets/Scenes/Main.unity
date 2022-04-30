@@ -1585,7 +1585,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2059,6 +2059,24 @@ PrefabInstance:
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 4558105857930560860, guid: 003c1009119813c4c8356bb0a579cae1, type: 3}
+    - target: {fileID: 4558105857930560860, guid: 003c1009119813c4c8356bb0a579cae1, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558105857930560860, guid: 003c1009119813c4c8356bb0a579cae1, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[0]
+      value: '"path":"_commandDictionary","add_keys":{"$id":0,"$type":"System.Object[],
+        mscorlib","$rlength":2,"$rcontent":[{"$id":1,"$type":"System.String, mscorlib","shoot"},$iref:1]},"remove_keys":null'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558105857930560860, guid: 003c1009119813c4c8356bb0a579cae1, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[1]
+      value: '"path":"_commandDictionary.{\"shoot\"}","value":{"$id":0,"$type":"Source.Runtime.BotCommand,
+        Assembly-CSharp",5}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558105857930560860, guid: 003c1009119813c4c8356bb0a579cae1, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4558105858357437024, guid: 003c1009119813c4c8356bb0a579cae1, type: 3}
       propertyPath: m_Name
       value: HUD

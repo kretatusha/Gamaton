@@ -11,10 +11,11 @@ namespace Source.Runtime
         private readonly float _jumpPower;
         private bool _isMove;
         private Vector3 _velocity;
-        
+
         public Vector3 Velocity => _velocity;
 
-        public BotCommandable(CommandReceiver commandReceiver, Rigidbody2D rigidbody2D, Transform body, float movementSpeed, float jumpPower)
+        public BotCommandable(CommandReceiver commandReceiver, Rigidbody2D rigidbody2D, Transform body,
+            float movementSpeed, float jumpPower)
         {
             _commandReceiver = commandReceiver;
             _rigidbody2D = rigidbody2D;

@@ -6,6 +6,7 @@
         MOVE,
         FLIP,
         KILL,
-        STOP
+        STOP,
+        SHOOT
     }
 }

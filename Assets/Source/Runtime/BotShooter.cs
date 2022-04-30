@@ -1,18 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BotShooter : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private Transform _shootPoint;
+    private Rigidbody2D _bulletPrefab;
+    private float _bulletSpeed;
+    private Transform _body;
 
-    // Update is called once per frame
-    void Update()
+    public void Init(Transform shootPoint, Rigidbody2D bulletPrefab, float bulletSpeed, Transform body)
     {
-        
+        _shootPoint = shootPoint;
+        _bulletPrefab = bulletPrefab;
+        _bulletSpeed = bulletSpeed;
+        _body = body;
+    }
+    
+    public void Shoot()
+    {
+        var bullet = Instantiate(_bulletPrefab, _shootPoint.position, Quaternion.identity);
+        bullet.velocity = _body.right * _bulletSpeed;
     }
 }

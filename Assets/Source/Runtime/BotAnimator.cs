@@ -6,6 +6,7 @@ public class BotAnimator
     private readonly int _velocityXHash = Animator.StringToHash("Velocity X");
     private readonly int _groundedHash = Animator.StringToHash("Grounded");
     private readonly int _dieHash = Animator.StringToHash("Die");
+    private readonly int _shootHash = Animator.StringToHash("Shoot");
     private readonly Animator _animator;
     private readonly BotCommandable _botCommandable;
     private readonly GroundChecker _groundChecker;
@@ -17,6 +18,7 @@ public class BotAnimator
         _botCommandable = botCommandable;
         _groundChecker = groundChecker;
         commandReceiver.KillCommanded += OnDied;
+        commandReceiver.ShootCommanded += OnShooted;
     }
 
     public void Update()
@@ -25,9 +27,13 @@ public class BotAnimator
         _animator.SetBool(_groundedHash, _groundChecker.IsGrounded);
     }
 
+    private void OnShooted()
+    {
+        _animator.SetTrigger(_shootHash);
+    }
+
     private void OnDied()
     {
         _animator.SetTrigger(_dieHash);
-        Debug.Log("Died");
     }
 }
