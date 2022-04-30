@@ -24,6 +24,8 @@ namespace Source.Runtime
         private PlayerInput _playerInput;
         private Transform _botTransform;
 
+        private string _lastCommand;
+
         private void Awake()
         {
             _botTransform = FindObjectOfType<BotCompositionRoot>().transform;
@@ -34,6 +36,7 @@ namespace Source.Runtime
         {
             _inputField.text = "";
             _playerInput.Player.Enter.performed += _ => ProcessInputField();
+            _playerInput.Player.PreviousCommand.performed += _ => SetupLastCommand();
         }
 
         private void OnEnable()
@@ -51,10 +54,17 @@ namespace Source.Runtime
             _inputField.ActivateInputField();
         }
 
+        private void SetupLastCommand()
+        {
+            if(_lastCommand != null)
+                _inputField.text = _lastCommand;
+        }
+        
         private void ProcessInputField()
         {
             var input = _inputField.text;
             input = input.ToLower().Trim(' ');
+            _lastCommand = input;
             _inputField.text = "";
             if (_commandDictionary.ContainsKey(input))
             {
