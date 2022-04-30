@@ -184,7 +184,7 @@ RectTransform:
   m_GameObject: {fileID: 4558105857331485841}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4558105858447820599}
@@ -488,7 +488,7 @@ MonoBehaviour:
       Data: kill
     - Name: $v
       Entry: 3
-      Data: 0
+      Data: 3
     - Name: 
       Entry: 8
       Data: 
@@ -512,7 +512,7 @@ MonoBehaviour:
       Data: 
   _inputField: {fileID: 4558105857331485842}
   _signalPrefab: {fileID: 4477028129736519476, guid: c3dd8ca25e3c09b429e519cdd3003d6e, type: 3}
-  _signalSpeed: 20
+  _signalSpeed: 30
   _signalDistanceToReach: 0.2
 --- !u!1 &4558105858018823528
 GameObject:

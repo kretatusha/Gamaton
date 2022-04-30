@@ -582,7 +582,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.05, y: 2.45}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -761,6 +761,7 @@ GameObject:
   - component: {fileID: 1521622737681131577}
   - component: {fileID: 1521622737681131558}
   - component: {fileID: 852219795}
+  - component: {fileID: 1376614749}
   m_Layer: 0
   m_Name: Bot
   m_TagString: Untagged
@@ -839,7 +840,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _botBody: {fileID: 1521622737264955423}
-  _movementSpeed: 2
+  _movementSpeedMax: 1.5
+  _movementSpeedMin: 4
   _jumpPower: 7
   _groundCheckPoint: {fileID: 1521622737315490769}
   _groundCheckRadius: 0.2
@@ -862,3 +864,15 @@ CapsuleCollider2D:
   m_Offset: {x: 0.027692154, y: -0.2114672}
   m_Size: {x: 0.80713177, y: 2.4299235}
   m_Direction: 0
+--- !u!114 &1376614749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521622737681131559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7375b669346cfea4bb78e6052296fd36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

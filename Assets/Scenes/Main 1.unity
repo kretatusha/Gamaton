@@ -1338,23 +1338,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.0002
---- !u!1 &1376614743 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1521622737681131559, guid: f8d04591160b67f4d9aceea128190ef3, type: 3}
-  m_PrefabInstance: {fileID: 1521622737442832297}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1376614749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1376614743}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7375b669346cfea4bb78e6052296fd36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1434791009
 GameObject:
   m_ObjectHideFlags: 0
@@ -1760,14 +1743,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CM
       objectReference: {fileID: 0}
-    - target: {fileID: 7260837553842617709, guid: 54e746f69cdaf30498f69de0dd3fb21c, type: 3}
-      propertyPath: m_Lens.m_SensorSize.x
-      value: 1.3060395
-      objectReference: {fileID: 0}
-    - target: {fileID: 7260837553842617709, guid: 54e746f69cdaf30498f69de0dd3fb21c, type: 3}
-      propertyPath: m_Lens.OrthographicSize
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 7260837553842617710, guid: 54e746f69cdaf30498f69de0dd3fb21c, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -2154,26 +2129,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1521622737264955420, guid: f8d04591160b67f4d9aceea128190ef3, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1521622737264955422, guid: f8d04591160b67f4d9aceea128190ef3, type: 3}
-      propertyPath: m_Size.x
-      value: 1.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 1521622737264955422, guid: f8d04591160b67f4d9aceea128190ef3, type: 3}
-      propertyPath: m_Size.y
-      value: 2.45
-      objectReference: {fileID: 0}
-    - target: {fileID: 1521622737264955422, guid: f8d04591160b67f4d9aceea128190ef3, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1521622737315490782, guid: f8d04591160b67f4d9aceea128190ef3, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1521622737662184001, guid: f8d04591160b67f4d9aceea128190ef3, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -2230,18 +2185,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Claw
       objectReference: {fileID: 0}
-    - target: {fileID: 1521622737681131558, guid: f8d04591160b67f4d9aceea128190ef3, type: 3}
-      propertyPath: _movementSpeed
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1521622737681131558, guid: f8d04591160b67f4d9aceea128190ef3, type: 3}
-      propertyPath: _movementSpeedMax
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1521622737681131558, guid: f8d04591160b67f4d9aceea128190ef3, type: 3}
-      propertyPath: _movementSpeedMin
-      value: 4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8d04591160b67f4d9aceea128190ef3, type: 3}
 --- !u!1001 &4558105857215780548
@@ -2251,18 +2194,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4558105857331485853, guid: 003c1009119813c4c8356bb0a579cae1, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4558105857331485853, guid: 003c1009119813c4c8356bb0a579cae1, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4558105857930560860, guid: 003c1009119813c4c8356bb0a579cae1, type: 3}
-      propertyPath: _signalSpeed
-      value: 30
-      objectReference: {fileID: 0}
     - target: {fileID: 4558105857930560860, guid: 003c1009119813c4c8356bb0a579cae1, type: 3}
       propertyPath: serializationData.Prefab
       value: 
@@ -2277,16 +2208,12 @@ PrefabInstance:
         Assembly-CSharp",3}'
       objectReference: {fileID: 0}
     - target: {fileID: 4558105857930560860, guid: 003c1009119813c4c8356bb0a579cae1, type: 3}
-      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.size
-      value: 0
+      propertyPath: serializationData.SerializationNodes.Array.data[18].Data
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4558105858357437024, guid: 003c1009119813c4c8356bb0a579cae1, type: 3}
       propertyPath: m_Name
       value: HUD
-      objectReference: {fileID: 0}
-    - target: {fileID: 4558105858357437024, guid: 003c1009119813c4c8356bb0a579cae1, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4558105858357437036, guid: 003c1009119813c4c8356bb0a579cae1, type: 3}
       propertyPath: m_Pivot.x
