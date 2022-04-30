@@ -292,7 +292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _botBody: {fileID: 724569364441160168}
-  _movementSpeedMax: 1.5
+  _movementSpeedMax: 2
   _movementSpeedMin: 4
   _jumpPower: 7
   _groundCheckPoint: {fileID: 724569363579898892}

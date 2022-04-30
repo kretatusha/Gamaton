@@ -80,7 +80,7 @@ public class BotCompositionRoot : MonoBehaviour
         var movementSpeed = Random.Range(_movementSpeedMin, _movementSpeedMax);
 
         _botAnimator = new BotAnimator(GetComponent<Animator>(), _commandable, _groundChecker, _commandReceiver);
-        _commandable.Init(_commandReceiver, _rigidbody2D, _botBody, movementSpeed, _jumpPower, _botAnimator);
+        _commandable.Init(_commandReceiver, _rigidbody2D, _botBody, movementSpeed, _jumpPower, _botAnimator, _groundChecker);
 
         _botShooter.Init(_shootPoint, _bulletPrefab, _bulletSpeed, _botBody);
         _commandReceiver.Init();

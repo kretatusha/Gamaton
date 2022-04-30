@@ -14,11 +14,12 @@ namespace Source.Runtime
         private bool _isMove;
         private Vector3 _velocity;
         private BotAnimator _botAnimator;
+        private GroundChecker _groundChecker;
 
         public Vector3 Velocity => _rigidbody2D.velocity;
 
         public void Init(CommandReceiver commandReceiver, Rigidbody2D rigidbody2D, Transform body,
-            float movementSpeed, float jumpPower, BotAnimator botAnimator)
+            float movementSpeed, float jumpPower, BotAnimator botAnimator, GroundChecker groundChecker)
         {
             _commandReceiver = commandReceiver;
             _rigidbody2D = rigidbody2D;
@@ -26,6 +27,7 @@ namespace Source.Runtime
             _movementSpeed = movementSpeed;
             _jumpPower = jumpPower;
             _botAnimator = botAnimator;
+            _groundChecker = groundChecker;
 
             _commandReceiver.MoveCommanded += Move;
             _commandReceiver.JumpCommanded += Jump;
@@ -39,7 +41,8 @@ namespace Source.Runtime
 
         private void Jump()
         {
-            _rigidbody2D.AddForce(Vector2.up * _jumpPower, ForceMode2D.Impulse);
+            if(_groundChecker.IsGrounded)
+                _rigidbody2D.AddForce(Vector2.up * _jumpPower, ForceMode2D.Impulse);
         }
 
         private void Flip()

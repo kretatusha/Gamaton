@@ -1456,7 +1456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b9029ec1bbb9264aa7ae8107a8c4ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _nextSceneIndex: 1
+  _nextSceneIndex: 2
 --- !u!1 &1559693273
 GameObject:
   m_ObjectHideFlags: 0
@@ -1511,7 +1511,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8
+  orthographic size: 6.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1785,7 +1785,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -161, y: 292}
+  m_AnchoredPosition: {x: -68, y: 345}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1897355165
@@ -1809,7 +1809,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "\u041F\u0430\u043C\u044F\u0442\u043A\u0430 \u043F\u043E \u0437\u0430\u0445\u0432\u0430\u0442\u0443
-    \u043C\u0438\u0440\u0430:\njump - \u043F\u0440\u044B\u0436\u043E\u043A\nmove-\u0438\u0434\u0442\u0438\nstop-\u043E\u0441\u0442\u0430\u043D\u043E\u0432\u043A\u0430\nshoot-\u0441\u0442\u0440\u0435\u043B\u044F\u0442\u044C\nflip-\u043F\u043E\u0432\u0435\u0440\u043D\u0443\u0442\u044C\u0441\u044F\nkill
+    \u043C\u0438\u0440\u0430:\njump - \u043F\u0440\u044B\u0436\u043E\u043A\nmove-\u0438\u0434\u0442\u0438\nstop-\u043E\u0441\u0442\u0430\u043D\u043E\u0432\u043A\u0430\nshoot-\u0441\u0442\u0440\u0435\u043B\u044F\u0442\u044C
+    \u0432 \u044E\u0440\u0438\u0441\u0442\u043E\u0432-\u0433\u043E\u0440\u043E\u0436\u0430\u043D\nflip-\u043F\u043E\u0432\u0435\u0440\u043D\u0443\u0442\u044C\u0441\u044F\nkill
     - \u0441\u0443\u0438\u0446\u0438\u0434)\n\u0441\u0442\u0440\u0435\u043B\u043A\u0430
     \u0432\u0432\u0435\u0440\u0445 - \u043F\u0440\u0435\u0434\u044B\u0434\u0443\u0449\u0430\u044F
     \u043A\u043E\u043C\u0430\u043D\u0434\u0430"
@@ -1839,8 +1840,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1933,7 +1934,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 6.74938, y: 1.9140143}
+  m_Offset: {x: 11.850819, y: 1.9140143}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1944,7 +1945,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 45.499126, y: 4.7305965}
+  m_Size: {x: 70.22148, y: 4.7305965}
   m_EdgeRadius: 0
 --- !u!4 &1964631501
 Transform:
@@ -2242,6 +2243,10 @@ PrefabInstance:
     - target: {fileID: 7260837553842617708, guid: 54e746f69cdaf30498f69de0dd3fb21c, type: 3}
       propertyPath: m_Name
       value: CM
+      objectReference: {fileID: 0}
+    - target: {fileID: 7260837553842617709, guid: 54e746f69cdaf30498f69de0dd3fb21c, type: 3}
+      propertyPath: m_Lens.m_SensorSize.x
+      value: 1.3060395
       objectReference: {fileID: 0}
     - target: {fileID: 7260837553842617710, guid: 54e746f69cdaf30498f69de0dd3fb21c, type: 3}
       propertyPath: m_RootOrder

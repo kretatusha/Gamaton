@@ -9,6 +9,10 @@ public class SceneLoader : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col)
     {
         if(col.GetComponent<BotCompositionRoot>())
-            SceneManager.LoadSceneAsync(_nextSceneIndex);
+            LoadNextScene();
     }
+
+    public void LoadNextScene() => SceneManager.LoadSceneAsync(_nextSceneIndex);
+
+    public void Exit() => Application.Quit();
 }
