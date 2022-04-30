@@ -523,7 +523,8 @@ MonoBehaviour:
       Entry: 8
       Data: 
   _inputField: {fileID: 4558105857331485842}
-  _signalPrefab: {fileID: 4477028129736519476, guid: c3dd8ca25e3c09b429e519cdd3003d6e, type: 3}
+  _goodSignalPrefab: {fileID: 4477028129736519476, guid: c3dd8ca25e3c09b429e519cdd3003d6e, type: 3}
+  _wrongSignalPrefab: {fileID: 2480690826057949730, guid: 11307520fc192294baca0fef2fb60f5e, type: 3}
   _signalSpeed: 30
   _signalDistanceToReach: 0.2
 --- !u!1 &4558105858018823528
