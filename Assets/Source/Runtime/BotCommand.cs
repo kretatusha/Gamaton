@@ -7,6 +7,7 @@
         FLIP,
         KILL,
         STOP,
-        SHOOT
+        SHOOT,
+        EXIT
     }
 }

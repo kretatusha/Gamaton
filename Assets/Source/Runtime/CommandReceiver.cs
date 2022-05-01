@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEngine.SceneManagement;
 
 namespace Source.Runtime
 {
@@ -46,6 +47,9 @@ namespace Source.Runtime
                 case BotCommand.SHOOT:
                     StopCommanded?.Invoke();
                     ShootCommanded?.Invoke();
+                    break;
+                case BotCommand.EXIT:
+                    SceneManager.LoadScene(0);
                     break;
             }
         }
