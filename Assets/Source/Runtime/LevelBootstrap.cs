@@ -20,8 +20,11 @@ public class LevelBootstrap : MonoBehaviour
     [SerializeField]
     private CinemachineVirtualCamera _cm;
 
+    private Vector3 _startPosition;
+
     private void Awake()
     {
+        _startPosition = transform.position;
         _botCompositionRoot.transform.parent = transform;
         _cm.Follow = null;
         _cm.LookAt = null;
@@ -41,7 +44,8 @@ public class LevelBootstrap : MonoBehaviour
         _cm.LookAt = _botCompositionRoot.transform;
         _botCompositionRoot.transform.parent = null;
         _botCompositionRoot.enabled = true;
+        transform.DOMove(_startPosition, _bootstrapDuration).onComplete += () => DisableClaw();
     }
 
-    public void DisableClaw() => gameObject.SetActive(false);
+    private void DisableClaw() => gameObject.SetActive(false);
 }
