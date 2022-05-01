@@ -28,7 +28,7 @@ namespace Source.Runtime
         private PlayerInput _playerInput;
         private Transform _botTransform;
 
-        private LimitedStack<string> _commandBuffer = new(2);
+        private readonly LimitedStack<string> _commandBuffer = new(2);
 
         private void Awake()
         {
