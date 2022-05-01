@@ -17,7 +17,11 @@ namespace Source.Runtime.Common
 
         public T Peek() => linkedList.Last.Value;
 
-        public T PeekSecond() => linkedList.Last.Previous.Value;
+        public T PeekSecond()
+        {
+            if (linkedList.Last.Previous != null) return linkedList.Last.Previous.Value;
+            return Peek();
+        }
 
 
         public T Pop()
