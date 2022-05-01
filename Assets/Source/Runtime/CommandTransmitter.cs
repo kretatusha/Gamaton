@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
+using Source.Runtime.Common;
 using TMPro;
 using UnityEngine;
 
@@ -27,7 +28,7 @@ namespace Source.Runtime
         private PlayerInput _playerInput;
         private Transform _botTransform;
 
-        private string _lastCommand;
+        private LimitedStack<string> _commandBuffer = new(2);
 
         private void Awake()
         {
@@ -59,15 +60,19 @@ namespace Source.Runtime
 
         private void SetupLastCommand()
         {
-            if(_lastCommand != null)
-                _inputField.text = _lastCommand;
+            if (!_commandBuffer.IsEmpty)
+            {
+                _inputField.text = _inputField.text == _commandBuffer.Peek()
+                    ? _commandBuffer.PeekSecond()
+                    : _commandBuffer.Peek();
+            }
         }
         
         private void ProcessInputField()
         {
             var input = _inputField.text;
             input = input.ToLower().Trim(' ');
-            _lastCommand = input;
+            _commandBuffer.Push(input);
             _inputField.text = "";
             if (_commandDictionary.ContainsKey(input))
             {
